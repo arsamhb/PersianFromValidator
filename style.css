@@ -1,0 +1,42 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    direction: rtl;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    margin: 1rem 1rem 0 1rem;
+}
+form{
+    width: 35%;
+}
+p{
+    font-weight: 800;
+}
+form input{
+    width: 100%;
+    border: 3px;
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.ErrorControl{
+    color: red;
+    display: none;
+}

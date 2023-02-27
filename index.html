@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SOROOSH HAMRAH TEST</title>
+</head>
+
+<body>    
+    <h1>فرم دریافت اطلاعات دانش آموز</h1>
+
+    <form name="myForm" onsubmit="validateForm(event)">
+    <p>نام</p> <input type="text" name="firstName">
+    <p class="ErrorControl" id="ErFirstName">لطفا فیلد را کامل نمایید</p>
+    <p class="ErrorControl" id="ErFirstName2">نام باید حداقل ۳ کاراکتر باشد</p>
+    
+    <p>نام خانوادگی</p> <input type="text" name="familyName">
+    <p class="ErrorControl" id="ErFamilyName">لطفا فیلد را کامل نمایید</p>
+    <p class="ErrorControl" id="ErFamilyName2">نام خانوداگی باید حداقل ۳ کاراکتر باشد</p>
+    
+    <p>شماره ملی</p> <input type="text" name="idCode"> 
+    <p class="ErrorControl" id="ErIdCode">لطفا فیلد را کامل نمایید</p>
+    <p class="ErrorControl" id="ErIdCode1">کد ملی باید ده رقمی باشد</p>
+    <p class="ErrorControl" id="ErIdCode2">کد ملی باید فقط عدد باشد</p>
+         
+    <p>تاریخ تولد</p>
+    <input type="number" name="birthDateDay" placeholder="1375">
+    <input type="number" name="birthDateMonth" placeholder="08">
+    <input type="number" name="birthDateYear" placeholder="08">
+    <p class="ErrorControl" id="ErBirthDate">لطفا فیلد را کامل نمایید</p>
+    
+    <p>ایمیل</p>
+    <input type="text" id="mail">
+    <p class="ErrorControl" id="ErEmail">لطفا ایمیل خود را کامل وارد نمایید</p>
+
+    <input type="submit" value="Submit">
+    </form>
+    <script defer src="main.js"></script>
+</body>
