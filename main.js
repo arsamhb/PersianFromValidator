@@ -1,50 +1,51 @@
 function validateForm(event) {
-    event.preventDefault()/* in prevent defult ro balad naboodam */
+    event.preventDefault()
     let firstName = document.forms["myForm"]["firstName"].value;
+ 
     if (firstName == "") {
-        document.getElementById("ErFirstName").style.display = "block";
+        document.getElementById("firstName").textContent = "لطفا فیلد را کامل نمایید";
         return false;
-        }  else {
-            document.getElementById("ErFirstName").style.display = "none";
-        }/* in dastore . lenght ro eshtebah typei dashtam */
+        } else {
+            document.getElementById("firstName").textContent = "";
+        }
         if (firstName.length <= 2) {
-            document.getElementById("ErFirstName2").style.display = "block";
+            document.getElementById("firstName").textContent = "نام باید حداقل ۳ کاراکتر باشد";
             return false;
         } else {
-            document.getElementById("ErFirstName2").style.display = "none";
+            document.getElementById("firstName").textContent = "";
         }
 
     let familyName = document.forms["myForm"]["familyName"].value;
     if (familyName == "") {
-        document.getElementById("ErFamilyName").style.display = "block";
+        document.getElementById("familyName").textContent = "لطفا فیلد را کامل نمایید";
         return false;
         } else {
-            document.getElementById("ErFamilyName").style.display = "none";
+            document.getElementById("familyName").textContent = "";
         }
         if (familyName.length <= 2) {
-            document.getElementById("ErFamilyName2").style.display = "block";
+            document.getElementById("familyName").textContent = "نام خانوادگی باید حداقل ۳ کاراکتر باشد";
             return false;
         } else {
-            document.getElementById("ErFamilyName2").style.display = "none";
+            document.getElementById("familyName").textContent = "";
         }
     
     let idCode = document.forms["myForm"]["idCode"].value;
     if (idCode == "") {
-        document.getElementById("ErIdCode").style.display = "block";
+        document.getElementById("idCode").textContent = "لطفا فیلد را کامل نمایید";
         return false;
         } else {
-            document.getElementById("ErIdCode").style.display = "none";
+            document.getElementById("idCode").textContent = "";
         }
         if (idCode.length != 10) {
-            document.getElementById("ErIdCode1").style.display = "block";
+            document.getElementById("idCode").textContent = "کد ملی باید ده رقمی باشد";
             return false;
         } else {
-            document.getElementById("ErIdCode1").style.display = "none";
+            document.getElementById("idCode").textContent = "";
         }
         if (/^\d+$/.test(idCode)) {
-            document.getElementById("ErIdCode2").style.display = "none";
+            document.getElementById("idCode").textContent = "";
         } else {
-            document.getElementById("ErIdCode2").style.display = "block";
+            document.getElementById("idCode").textContent = "کد ملی باید فقط عدد باشد";
             return false;
         }
 
@@ -53,24 +54,24 @@ function validateForm(event) {
         let birtDateYear = document.forms["myForm"]["birthDateYear"].value;
 
         if(birtDateDay == "" || birtDateMonth == "" || birtDateYear == "") {
-            document.getElementById("ErBirthDate").style.display = "block";
+            document.getElementById("birthDate").textContent = "لطفا فیلد را کامل نمایید";
         } else {
-            document.getElementById("ErBirthDate").style.display = "none";
+            document.getElementById("birthDate").textContent = "";
         }
     
         if(/^\d+$/.test(birtDateDay) && /^\d+$/.test(birtDateMonth) && /^\d+$/.test(birtDateYear) ) {
-            document.getElementById("ErBirthDate").style.display = "none";
+            document.getElementById("birthDate").textContent = "";
         } else {
-            document.getElementById("ErBirthDate").style.display = "block";
+            document.getElementById("birthDate").textContent = "لطفا فیلد را کامل نمایید";
             return false;
         }
         
         let mail = document.forms["myForm"]["mail"].value;
         const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
         if (mail.match(validRegex)) {
-            document.getElementById("ErEmail").style.display = "none"
+            document.getElementById("ErEmail").textContent = ""
         } else {
-            document.getElementById("ErEmail").style.display = "block"
+            document.getElementById("ErEmail").textContent = "لطفا ایمیل خود را کامل وارد نمایید"
             return false;
         }
     }

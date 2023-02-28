@@ -38,5 +38,5 @@ form .btn2{
 }
 .ErrorControl{
     color: red;
-    display: none;
+    display: block;
 }
